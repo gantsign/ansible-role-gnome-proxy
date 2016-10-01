@@ -1,5 +1,24 @@
 ---
-- hosts: localhost
+- hosts: all
   remote_user: root
   roles:
-    - ansible-role-gnome-proxy
+    - role: ansible-role-gnome-proxy
+      gnome_proxy_mode: manual
+      gnome_proxy_autoconfig_url: http://pac.example.com
+      gnome_proxy_ignore_hosts:
+        - 'localhost'
+        - '127.0.0.0/8'
+        - '::1'
+      gnome_proxy_use_same_proxy: false
+      gnome_proxy_http_host: http.example.com
+      gnome_proxy_http_port: 3100
+      gnome_proxy_http_use_authentication: true
+      gnome_proxy_http_authentication_user: test_user
+      gnome_proxy_http_authentication_password: test_password
+      gnome_proxy_http_enabled: yes
+      gnome_proxy_https_host: https.example.com
+      gnome_proxy_https_port: 3101
+      gnome_proxy_ftp_host: ftp.example.com
+      gnome_proxy_ftp_port: 3102
+      gnome_proxy_socks_host: socks.example.com
+      gnome_proxy_socks_port: 3103
