@@ -1,10 +1,4 @@
 ---
-# Directory where GLib schemas are located
-gnome_proxy_glib_schemas_directory: /usr/share/glib-2.0/schemas
-
-# Name of override file for gnome_proxy config
-gnome_proxy_overide_filename: 20_ansible-proxy.gschema.override
-
 # The proxy mode (none, manual or auto)
 gnome_proxy_mode:
 
@@ -53,3 +47,9 @@ gnome_proxy_socks_host:
 
 # The port for the SOCKS proxy
 gnome_proxy_socks_port:
+
+# Directory where GLib schemas are located
+gnome_proxy_glib_schemas_directory: '/usr/share/glib-2.0/schemas'
+
+# Name of override file for gnome_proxy config
+gnome_proxy_overide_filename: '20_ansible-proxy.gschema.override'
