@@ -1,2 +1,22 @@
 ---
-# tasks file for ansible-role-gnome-proxy
+- name: install libglib2.0-bin
+  become: yes
+  apt:
+    name: libglib2.0-bin
+    state: present
+  when: "ansible_pkg_mgr == 'apt'"
+
+- name: configure proxy
+  become: yes
+  template:
+    src: proxy.gschema.override.j2
+    dest: "{{ gnome_proxy_glib_schemas_directory }}/{{ gnome_proxy_overide_filename }}"
+    owner: root
+    group: root
+    mode: 'u=rw,go=r'
+  register: gnome_proxy_config
+
+- name: apply glib schemas changes
+  become: yes
+  command: "/usr/bin/glib-compile-schemas {{ gnome_proxy_glib_schemas_directory }}"
+  when: gnome_proxy_config.changed

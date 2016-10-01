@@ -1,0 +1,59 @@
+# {{ ansible_managed }}
+
+[org.gnome.system.proxy]
+{% if gnome_proxy_use_same_proxy not in (None, '', omit) %}
+use-same-proxy={{ gnome_proxy_use_same_proxy | bool | ternary('true', 'false') }}
+{% endif %}
+{% if gnome_proxy_mode not in (None, '', omit) %}
+mode='{{ gnome_proxy_mode }}'
+{% endif %}
+{% if gnome_proxy_autoconfig_url not in (None, '', omit) %}
+autoconfig-url='{{ gnome_proxy_autoconfig_url }}'
+{% endif %}
+{% if gnome_proxy_ignore_hosts not in (None, '', [], omit) %}
+ignore-hosts=['{{ gnome_proxy_ignore_hosts | join("', '")}}']
+{% endif %}
+
+[org.gnome.system.proxy.ftp]
+{% if gnome_proxy_ftp_host not in (None, '', omit) %}
+host='{{ gnome_proxy_ftp_host }}'
+{% endif %}
+{% if gnome_proxy_ftp_port not in (None, '', omit) %}
+port={{ gnome_proxy_ftp_port }}
+{% endif %}
+
+[org.gnome.system.proxy.socks]
+{% if gnome_proxy_socks_host not in (None, '', omit) %}
+host='{{ gnome_proxy_socks_host }}'
+{% endif %}
+{% if gnome_proxy_socks_port not in (None, '', omit) %}
+port={{ gnome_proxy_socks_port }}
+{% endif %}
+
+[org.gnome.system.proxy.http]
+{% if gnome_proxy_http_host not in (None, '', omit) %}
+host='{{ gnome_proxy_http_host }}'
+{% endif %}
+{% if gnome_proxy_http_port not in (None, '', omit) %}
+port={{ gnome_proxy_http_port }}
+{% endif %}
+{% if gnome_proxy_http_use_authentication not in (None, '', omit) %}
+use-authentication={{ gnome_proxy_http_use_authentication | bool | ternary('true', 'false') }}
+{% endif %}
+{% if gnome_proxy_http_authentication_password not in (None, '', omit) %}
+authentication-password='{{ gnome_proxy_http_authentication_password }}'
+{% endif %}
+{% if gnome_proxy_http_authentication_user not in (None, '', omit) %}
+authentication-user='{{ gnome_proxy_http_authentication_user }}'
+{% endif %}
+{% if gnome_proxy_http_enabled not in (None, '', omit) %}
+enabled={{ gnome_proxy_http_enabled | bool | ternary('true', 'false') }}
+{% endif %}
+
+[org.gnome.system.proxy.https]
+{% if gnome_proxy_https_host not in (None, '', omit) %}
+host='{{ gnome_proxy_https_host }}'
+{% endif %}
+{% if gnome_proxy_https_port not in (None, '', omit) %}
+port={{ gnome_proxy_https_port }}
+{% endif %}

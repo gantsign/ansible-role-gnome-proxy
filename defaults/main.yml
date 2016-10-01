@@ -1,2 +1,55 @@
 ---
-# defaults file for ansible-role-gnome-proxy
+# Directory where GLib schemas are located
+gnome_proxy_glib_schemas_directory: /usr/share/glib-2.0/schemas
+
+# Name of override file for gnome_proxy config
+gnome_proxy_overide_filename: 20_ansible-proxy.gschema.override
+
+# The proxy mode (none, manual or auto)
+gnome_proxy_mode:
+
+# The URL of the proxy auto-config (PAC) file
+# See: https://en.wikipedia.org/wiki/Proxy_auto-config
+gnome_proxy_autoconfig_url:
+
+# List of hostnames / IP addresses not to proxy
+gnome_proxy_ignore_hosts:
+
+# Use the specified proxy for all protocols
+gnome_proxy_use_same_proxy:
+
+# The hostname / IP address for the HTTP proxy
+gnome_proxy_http_host:
+
+# The port for the HTTP proxy
+gnome_proxy_http_port:
+
+# Whether the HTTP proxy requires authentication
+gnome_proxy_http_use_authentication:
+
+# The username used to access the HTTP proxy
+gnome_proxy_http_authentication_user:
+
+# The password used to access the HTTP proxy
+gnome_proxy_http_authentication_password:
+
+# Whether the HTTP proxy is enabled
+gnome_proxy_http_enabled:
+
+# The hostname / IP address for the HTTPS proxy
+gnome_proxy_https_host:
+
+# The port for the HTTPS proxy
+gnome_proxy_https_port:
+
+# The hostname / IP address for the FTP proxy
+gnome_proxy_ftp_host:
+
+# The port for the FTP proxy
+gnome_proxy_ftp_port:
+
+# The hostname / IP address for the SOCKS proxy
+gnome_proxy_socks_host:
+
+# The port for the SOCKS proxy
+gnome_proxy_socks_port:
