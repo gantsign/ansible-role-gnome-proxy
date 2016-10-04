@@ -41,6 +41,7 @@ gnome_proxy_mode:
 
 # The URL of the proxy auto-config (PAC) file
 # See: https://en.wikipedia.org/wiki/Proxy_auto-config
+# https://en.wikipedia.org/wiki/Web_Proxy_Autodiscovery_Protocol
 gnome_proxy_autoconfig_url:
 
 # List of hostnames / IP addresses not to proxy
@@ -102,8 +103,10 @@ Example Playbooks
   roles:
     - role: gantsign.gnome-proxy
       gnome_proxy_mode: 'auto'
-      # See: https://en.wikipedia.org/wiki/Proxy_auto-config
-      gnome_proxy_autoconfig_url: 'http://example.com/proxy.pac'
+      # Gnome should be able to discover the auto-config URL using:
+      # https://en.wikipedia.org/wiki/Web_Proxy_Autodiscovery_Protocol
+      # if auto-discovery fails you can specify the URL as below:
+      gnome_proxy_autoconfig_url: 'http://wpad.example.com/wpad.dat'
 ```
 
 ## Manual-proxy
