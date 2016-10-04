@@ -18,7 +18,7 @@ def test_proxy_config_file(File):
 
 @pytest.mark.parametrize('setting', [
     "mode='manual'",
-    "autoconfig-url='http://pac.example.com'",
+    "autoconfig-url='http://wpad.example.com/wpad.dat'",
     r"ignore-hosts=\['localhost', '127.0.0.0/8', '::1'\]",
     "use-same-proxy=false",
     "host='http.example.com'",

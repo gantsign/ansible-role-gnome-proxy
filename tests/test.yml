@@ -4,7 +4,7 @@
   roles:
     - role: ansible-role-gnome-proxy
       gnome_proxy_mode: manual
-      gnome_proxy_autoconfig_url: http://pac.example.com
+      gnome_proxy_autoconfig_url: http://wpad.example.com/wpad.dat
       gnome_proxy_ignore_hosts:
         - 'localhost'
         - '127.0.0.0/8'

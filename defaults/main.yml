@@ -4,6 +4,7 @@ gnome_proxy_mode:
 
 # The URL of the proxy auto-config (PAC) file
 # See: https://en.wikipedia.org/wiki/Proxy_auto-config
+# https://en.wikipedia.org/wiki/Web_Proxy_Autodiscovery_Protocol
 gnome_proxy_autoconfig_url:
 
 # List of hostnames / IP addresses not to proxy
