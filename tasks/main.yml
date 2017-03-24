@@ -14,5 +14,9 @@
     owner: root
     group: root
     mode: 'u=rw,go=r'
-  notify:
-    - comple glib schemas
+  register: gnome_proxy_config
+
+- name: apply glib schemas changes
+  become: yes
+  command: "/usr/bin/glib-compile-schemas {{ gnome_proxy_glib_schemas_directory }}"
+  when: gnome_proxy_config.changed

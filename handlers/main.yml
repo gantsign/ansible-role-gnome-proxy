@@ -1,4 +1,2 @@
 ---
-- name: comple glib schemas
-  become: yes
-  command: "/usr/bin/glib-compile-schemas {{ gnome_proxy_glib_schemas_directory }}"
+# handlers file for ansible-role-gnome-proxy
