@@ -1,4 +1,4 @@
-# {{ ansible_managed }}
+{{ ansible_managed | comment }}
 
 [org.gnome.system.proxy]
 {% if gnome_proxy_use_same_proxy not in (None, '', omit) %}
