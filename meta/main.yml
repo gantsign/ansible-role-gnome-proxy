@@ -6,11 +6,11 @@ galaxy_info:
   license: MIT
   min_ansible_version: 1.9
   platforms:
-  - name: Ubuntu
-    versions:
-    - trusty
-    - wily
-    - xenial
+    - name: Ubuntu
+      versions:
+        - trusty
+        - wily
+        - xenial
   galaxy_tags:
     - proxy
     - gnome
