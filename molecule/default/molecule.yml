@@ -9,9 +9,9 @@ lint:
   name: yamllint
 
 platforms:
-  - name: ansible-role-gnome-proxy-ubuntu-trusty
+  - name: ansible-role-gnome-proxy-ubuntu-min
     image: ubuntu:14.04
-  - name: ansible-role-gnome-proxy-ubuntu-xenial
+  - name: ansible-role-gnome-proxy-ubuntu-max
     image: ubuntu:16.04
 
 provisioner:
