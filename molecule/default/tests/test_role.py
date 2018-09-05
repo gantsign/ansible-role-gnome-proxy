@@ -7,9 +7,9 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
     os.environ['MOLECULE_INVENTORY_FILE']).get_hosts('all')
 
 
-def test_proxy_config_file(File):
+def test_proxy_config_file(host):
     path = '/usr/share/glib-2.0/schemas/20_ansible-proxy.gschema.override'
-    config_file = File(path)
+    config_file = host.file(path)
 
     assert config_file.exists
     assert config_file.is_file
@@ -36,9 +36,9 @@ def test_proxy_config_file(File):
     "host='socks.example.com'",
     "port=3103"
 ])
-def test_proxy_config_contents(File, setting):
+def test_proxy_config_contents(host, setting):
     path = '/usr/share/glib-2.0/schemas/20_ansible-proxy.gschema.override'
-    config_file = File(path)
+    config_file = host.file(path)
 
     assert config_file.exists
     assert config_file.is_file
