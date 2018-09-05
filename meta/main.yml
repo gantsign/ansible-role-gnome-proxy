@@ -15,4 +15,5 @@ galaxy_info:
     - proxy
     - gnome
     - unity
+    - system
 dependencies: []
