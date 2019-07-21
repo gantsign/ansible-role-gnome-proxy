@@ -12,7 +12,7 @@ browser).
 Requirements
 ------------
 
-* Ansible >= 2.5
+* Ansible >= 2.6
 
     * Note: earlier versions of Ansible are likely to work but have not been
       tested.
