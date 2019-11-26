@@ -5,7 +5,7 @@ galaxy_info:
     Role for configuring the proxy settings for Gnome applications.
   company: GantSign Ltd.
   license: MIT
-  min_ansible_version: 2.6
+  min_ansible_version: 2.7
   platforms:
     - name: Ubuntu
       versions:
