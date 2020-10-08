@@ -1,7 +1,7 @@
 Ansible Role: Gnome Proxy
 =========================
 
-[![Build Status](https://travis-ci.org/gantsign/ansible-role-gnome-proxy.svg?branch=master)](https://travis-ci.org/gantsign/ansible-role-gnome-proxy)
+[![Build Status](https://travis-ci.com/gantsign/ansible-role-gnome-proxy.svg?branch=master)](https://travis-ci.com/gantsign/ansible-role-gnome-proxy)
 [![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-gantsign.gnome--proxy-blue.svg)](https://galaxy.ansible.com/gantsign/gnome-proxy)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/gantsign/ansible-role-gnome-proxy/master/LICENSE)
 
