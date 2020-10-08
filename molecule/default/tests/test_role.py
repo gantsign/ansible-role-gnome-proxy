@@ -1,10 +1,4 @@
 import pytest
-import os
-
-import testinfra.utils.ansible_runner
-
-testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
-    os.environ['MOLECULE_INVENTORY_FILE']).get_hosts('all')
 
 
 def test_proxy_config_file(host):
@@ -15,7 +9,7 @@ def test_proxy_config_file(host):
     assert config_file.is_file
     assert config_file.user == 'root'
     assert config_file.group == 'root'
-    assert oct(config_file.mode) == '0644'
+    assert oct(config_file.mode) == '0o644'
 
 
 @pytest.mark.parametrize('setting', [
